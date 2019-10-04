@@ -1,0 +1,19 @@
+version: '3.2'
+#
+### Services
+#
+services:
+#
+# SES
+#
+  relay-ses:
+    build: .
+    image: fametec/postfix-ses:latest
+    restart: unless-stopped
+    container_name: relay-ses
+    ports:
+     - "30025:25"
+    environment:
+     SES_USER: AAAAAAAAAAAAAAAAAAAAAAAA
+     SES_PASS: BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
+     SES_RELAYHOST: email-smtp.us-east-1.amazonaws.com
