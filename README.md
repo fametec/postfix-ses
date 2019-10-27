@@ -1,9 +1,9 @@
 # run
 
     docker run --rm -p 30025:25 -d --name postfix \
-    -e MAILGUN_USER=AAAAAAAAAAAAAAAAAAAAAAAA \
-    -e MAILGUN_PASS=BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB \
-    -e MAILGUN_RELAYHOST=email-smtp.us-east-1.amazonaws.com \
+    -e SES_USER=AAAAAAAAAAAAAAAAAAAAAAAA \
+    -e SES_PASS=BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB \
+    -e SES_RELAYHOST=email-smtp.us-east-1.amazonaws.com \
     fametec/postfix-ses:latest
 
 # docker-compose
